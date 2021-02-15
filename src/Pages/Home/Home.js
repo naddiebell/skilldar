@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
 
-function Home() {
-
+function Home( props) {
+    const { projectData } = props
     return (
         <>
             <header className="header">
