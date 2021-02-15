@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.navBar {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  background: #2e2e38;
+  height: 2.5rem;
+  width: 100%;
+}
