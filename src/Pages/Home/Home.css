@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    height: 30vh;
+    background-image: url("https://res.cloudinary.com/savely/image/upload/v1613401190/cinema/oxygen-nature-header_qwzmxf.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.headerTitle {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+
+}
+
+.headerSubtitle {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
