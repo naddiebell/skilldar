@@ -9,7 +9,7 @@ import Home from "./Pages/Home/Home"
 import ProjectCard from "./Components/ProjectCard/ProjectCard"
 
 function App() {
-  const [projectData, setData] = useState();
+  const [data, setData] = useState();
   const [state, dispatch] = useReducer(store.reducer, store.initialState);
 
   useEffect(async () => {
@@ -17,16 +17,14 @@ function App() {
       'https://my.api.mockaroo.com/skilldar.json?key=3a6cc520',
     );
 
-    setData(result.projectData);
+    setData(result.data);
   }, [])
-
-  console.log("data", projectData)
 
   return (
     <>
       <NavBar />
       <AppContext.Provider value={{ state, dispatch }}>
-        <Home projectData={projectData} />
+        <Home projectData={data} />
       </AppContext.Provider>
     </>
   );
