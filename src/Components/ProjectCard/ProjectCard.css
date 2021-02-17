@@ -1,4 +1,109 @@
 .card {
     width: 425px;
     height: 226px;
+    background: #2E2E38;
+    border-radius: 6px;
+    border-top: solid  #B0B3B5 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 16px;
+}
+
+.businessInfo {
+    width: 100%;
+    display: flex;
+    /* border: solid blue 2px; */
+   
+}
+
+.avatar {
+    background: green;
+    min-width: 50px;
+    min-height: 50px;
+    margin-right: 1rem;
+    border-radius: 3px;
+}
+
+.projectDescriptionDiv {
+    /* border: solid yellow 2px; */
+}
+
+.videoCountandDate {
+    display: inline;
+    padding-top: 1rem;
+    border-top: 2px solid #242629;
+
+}
+
+.businessName {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #B0B3B5;
+    font-size: 1em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.location {
+    color: #B0B3B5;
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+    line-height: 1em;
+}
+
+.locationText {
+    margin-left: 4px;
+}
+
+.projectDescriptionText {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: .5rem;
+    color: #EFF3F5;
+}
+
+.tagContainer {
+    display: flex;
+    font-size: .8em;
+}
+
+.videoCount {
+    float: left;
+    color: #B0B3B5;
+}
+
+.vidCountText{
+    margin-left: 4px;
+    font-family: Roboto;
+    font-size: .8em;
+}
+
+.date{
+    float: right;
+    color:#B0B3B5;
+}
+
+.vcdText{
+    font-size: .8em;
+    margin-left: 10px;
+}
+
+.tag {
+    color: #EFF3F5;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: .75em;
+    background:#5078BF;
+    margin-right: 10px;
+    border: 1px solid #EFF3F5;
+    border-radius: 3px;
+    text-align: center;
+    width: 100px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

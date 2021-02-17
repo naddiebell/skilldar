@@ -9,18 +9,19 @@ function Home(props) {
     console.log(projectData)
     console.log("state", state)
 
-    const dispCard = () => {
-        const arr2 = projectData.slice()
-        if (arr2.length === 0) {
+    const displayCard = (arr) => {
+        if (arr === undefined || (arr.length === 0)){
             return <div></div>
         }
-        const test = arr2.map((aProject) => {
+
+        const arrCopy = arr.slice();
+        const card = arr.map((aProject) => {
 
             return (
                 <ProjectCard business_name={aProject.business_name} avatar={aProject.avatar} location={aProject.location} project_description={aProject.project_description} tag1={aProject.tag1} tag2={aProject.tag2} video_count={aProject.video_count} date={aProject.date} />
             )
         })
-        return test
+        return card
     }
 
     return (
@@ -34,7 +35,7 @@ function Home(props) {
             </header>
             <div></div>
             <div>
-                {dispCard()}
+                {displayCard(projectData)}
             </div>
 
         </>

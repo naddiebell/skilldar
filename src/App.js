@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React, { useState, useEffect, useReducer } from 'react';
 import AppContext from "./store/context";
 import store from "./store";
@@ -6,7 +5,6 @@ import axios from 'axios';
 import './App.css';
 import NavBar from "./Components/NavBar/NavBar"
 import Home from "./Pages/Home/Home"
-import ProjectCard from "./Components/ProjectCard/ProjectCard"
 
 function App() {
   const [data, setData] = useState();
