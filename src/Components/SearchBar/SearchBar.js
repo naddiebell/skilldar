@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import AppContext from "../../store/context";
 
 export default function SearchBar() {
-    const { state, dispatch } = useContext(AppContext);
+    const { dispatch } = useContext(AppContext);
     const [searchTerm, setSearchTerm] = useState("");
     
     const handleKeyDown = (search) => {

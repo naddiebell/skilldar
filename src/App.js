@@ -11,14 +11,26 @@ function App() {
   const [data, setData] = useState();
   const [state, dispatch] = useReducer(store.reducer, store.initialState);
 
-  useEffect(async () => {
-    const result = await axios(
-      'https://my.api.mockaroo.com/skilldar.json?key=3a6cc520',
-    );
+  useEffect( () => {
+    async function fetchData() {
+      const result = await axios(
+        'https://my.api.mockaroo.com/skilldar.json?key=3a6cc520',
+      );
+  
+      setData(result.data);
 
-    setData(result.data);
+    }
+    fetchData()
   }, [])
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     // You can await here
+  //     const response = await MyAPI.getData(someId);
+  //     // ...
+  //   }
+  //   fetchData();
+  // }, [someId]); // Or [] if effect doesn't need props or state
 
 
 

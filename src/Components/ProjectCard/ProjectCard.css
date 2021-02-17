@@ -1,7 +1,7 @@
 .card {
     width: 425px;
     height: 226px;
-    background: #2E2E38;
+    background: #363a42;
     border-radius: 6px;
     border-top: solid  #B0B3B5 4px;
     padding: 1rem;
@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     font-size: 16px;
+    margin-bottom: 1.5rem;
 }
 
 .businessInfo {
@@ -17,14 +18,11 @@
 }
 
 .avatar {
-    background: green;
+    background: rgb(139, 145, 139);
     min-width: 50px;
     min-height: 50px;
     margin-right: 1rem;
     border-radius: 3px;
-}
-
-.projectDescriptionDiv {
 }
 
 .videoCountandDate {
