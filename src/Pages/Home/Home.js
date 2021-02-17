@@ -25,34 +25,36 @@ function Home(props) {
     }
 
 
-    let filteredProjectsArr = [];
+   
     const filteredProjects = (array, searchTerm) => {
-        if( array === undefined || searchTerm === ""){
+        if (array === undefined || searchTerm === "") {
             return
         }
-        const filteredProj = array.slice().map((aProject) => {
-            console.log("aProject", aProject)
-            console.log(aProject.tag1.toLowerCase())
+        let filteredProjectsArr = [];
+         array.slice().forEach((aProject) => {
             let tag1 = aProject.tag1.toLowerCase()
             let tag2 = aProject.tag2.toLowerCase()
             let business = aProject.business_name.toLowerCase()
             let searchTerm = search_term.toLowerCase();
-            if (tag1.includes(searchTerm)){
+            if (tag1.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
             }
-            if (tag2.includes(searchTerm)){
+            if (tag2.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
             }
-            if (business.includes(searchTerm)){
+            if (business.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
             }
-            return filteredProjectsArr
+            console.log("filteredProjectsArr", filteredProjectsArr)
+             return filteredProjectsArr
         })
-        return filteredProj;
+         console.log("filteredProjectsArr2222", filteredProjectsArr)
+        return filteredProjectsArr
     }
 
-    console.log(filteredProjects(projectData, search_term))
-    
+    console.log("aaaaa", filteredProjects(projectData, search_term))
+   // console.log("search term", search_term)
+
 
     const displayNumberOfProjects = (arr) => {
         if (arr === undefined) {
@@ -64,9 +66,20 @@ function Home(props) {
         )
     }
 
+    const displayUnfilteredProjects = () => {
+        if (search_term === "") {
+            return true
+        }
+    }
+
+    const displayFilteredProjects = () => {
+        if (search_term !== "") {
+            return true
+        }
+    }
+
     return (
         <>
-
             <header className="header">
                 <div className="headerText">
                     <h2 className="headerTitle">Creative motion projects</h2>
@@ -78,9 +91,17 @@ function Home(props) {
                 <div className="numberOfProjectsDiv">
                     {displayNumberOfProjects(projectData)}
                 </div>
-                <div className="projectCardDiv">
-                    {displayCard(projectData)}
-                </div>
+                {displayUnfilteredProjects() &&
+                    <div className="projectCardDiv">
+                        {displayCard(projectData)}
+                    </div>
+                }
+                {displayFilteredProjects() && 
+                    <div className="projectCardDiv">
+                        {displayCard(filteredProjects(projectData, search_term))}
+
+                    </div>
+                }
             </div>
         </>
     );
