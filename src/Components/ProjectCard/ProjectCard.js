@@ -29,7 +29,7 @@ function ProjectCard(props) {
                         <div className="tag">{tag2}</div>
                     </div>
                 </div>
-                <div className="videoCountandDate">
+                <div className="videoCountandDate"> 
                     <div className="videoCount"><FontAwesomeIcon icon={faVideo}/><span className="vcdText">{video_count}</span><span className="vidCountText">{videoPluralizer(video_count)}</span></div>
                     <div className="date"><FontAwesomeIcon icon={faClock}/><span className="vcdText">{date}</span></div>
                 </div>
@@ -39,3 +39,4 @@ function ProjectCard(props) {
 }
 
 export default ProjectCard;
+

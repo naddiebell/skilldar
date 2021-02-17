@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.css';
 import NavBar from "./Components/NavBar/NavBar"
 import Home from "./Pages/Home/Home"
+import SearchBar from "./Components/SearchBar/SearchBar"
 
 function App() {
   const [data, setData] = useState();
@@ -18,11 +19,15 @@ function App() {
     setData(result.data);
   }, [])
 
+
+
+
   return (
     <>
       <NavBar />
       <AppContext.Provider value={{ state, dispatch }}>
         <Home projectData={data} />
+        <SearchBar />
       </AppContext.Provider>
     </>
   );

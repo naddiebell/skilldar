@@ -37,7 +37,6 @@ function Home(props) {
             <div>
                 {displayCard(projectData)}
             </div>
-
         </>
     );
 }

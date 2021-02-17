@@ -14,8 +14,6 @@
 .businessInfo {
     width: 100%;
     display: flex;
-    /* border: solid blue 2px; */
-   
 }
 
 .avatar {
@@ -27,7 +25,6 @@
 }
 
 .projectDescriptionDiv {
-    /* border: solid yellow 2px; */
 }
 
 .videoCountandDate {
