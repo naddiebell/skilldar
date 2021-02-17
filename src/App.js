@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
+import AppContext from "./store/context";
+import store from "./store";
 import axios from 'axios';
 import './App.css';
 import NavBar from "./Components/NavBar/NavBar"
@@ -7,6 +8,7 @@ import Home from "./Pages/Home/Home"
 
 function App() {
   const [data, setData] = useState();
+  const [state, dispatch] = useReducer(store.reducer, store.initialState);
 
   useEffect(async () => {
     const result = await axios(
@@ -16,12 +18,12 @@ function App() {
     setData(result.data);
   }, [])
 
-  console.log("data", data)
-
   return (
     <>
       <NavBar />
-      <Home />
+      <AppContext.Provider value={{ state, dispatch }}>
+        <Home projectData={data} />
+      </AppContext.Provider>
     </>
   );
 }
