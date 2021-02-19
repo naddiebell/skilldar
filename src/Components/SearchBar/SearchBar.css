@@ -21,7 +21,7 @@
     color: white;
     font-family: Roberto;
     font-weight: 700;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 ::placeholder {
@@ -30,4 +30,11 @@
     font-weight: 700;
     opacity: 1;
     padding-left: 10px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .search {
+      width: 85%;
+    }
   }

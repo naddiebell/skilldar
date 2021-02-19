@@ -26,3 +26,9 @@
     color: #B0B3B5;
     padding-top: 2%;
 }
+
+@media only screen and (max-width: 600px) {
+    .jobCount {
+      padding-top: 8%;
+    }
+  }
