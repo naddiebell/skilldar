@@ -1,5 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from 'react';
 import AppContext from "../../store/context";
+import "./SearchBar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function SearchBar() {
     const { dispatch } = useContext(AppContext);
@@ -13,14 +16,13 @@ export default function SearchBar() {
             dispatch({ type: "setSearchTerm", data: search })
         }
     }
-
-
+  
     return (
-        <div className="Search">
+        <div className="search">
         <input
-          className="Searchbox"
+          className="searchbox"
           type="text"
-          placeholder="Search creative projects"
+          placeholder="&#xF002; Search creative projects"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={(event) =>
@@ -31,3 +33,5 @@ export default function SearchBar() {
       </div>
     )
 }
+
+

@@ -12,12 +12,12 @@ function App() {
   const [data, setData] = useState();
   const [state, dispatch] = useReducer(store.reducer, store.initialState);
 
-  useEffect( () => {
+  useEffect(() => {
     async function fetchData() {
       const result = await axios(
         'https://my.api.mockaroo.com/skilldar.json?key=3a6cc520',
       );
-  
+
       setData(result.data);
 
     }
@@ -27,11 +27,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <Header />
       <AppContext.Provider value={{ state, dispatch }}>
-        <SearchBar />
-        <Home projectData={data} />        
+        <div className="homePage">
+          <Header />
+          <SearchBar className="searchBar" />
+          <Home projectData={data} />
+        </div>
       </AppContext.Provider>
+      
     </>
   );
 }
