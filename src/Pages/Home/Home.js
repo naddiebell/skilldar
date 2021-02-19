@@ -62,7 +62,7 @@ function Home(props) {
         }
         let arrLength = arr.length;
         return (
-            <div>All jobs - {arrLength} results</div>
+            <div className="jobCount">All jobs - {arrLength} results</div>
         )
     }
 

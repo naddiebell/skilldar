@@ -2,7 +2,7 @@
     height: 3.5rem;
     width: 100%;
     background: #26262E;
-    border-bottom: 3px solid #8D8D8E;
+    border-bottom: 3px solid rgb(141, 141, 142, 0.35);
     /*  opacity: 0.35; for line */
 }
 
@@ -17,4 +17,12 @@
     justify-content: space-between;
     padding-top: 1.5rem;
     overflow: hidden;
+}
+
+.jobCount {
+    font-family: Roberto;
+    font-size: 12px;
+    font-weight: 700;
+    color: #B0B3B5;
+    padding-top: 2%;
 }
