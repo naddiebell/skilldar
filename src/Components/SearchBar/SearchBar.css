@@ -1,0 +1,33 @@
+.search {
+    height: 3rem;
+    width: 40%;
+    z-index: 10;
+    margin-top: -23px;
+    margin-bottom: -25px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.searchbox {
+    height: 100%;
+    width: 100%;
+    background: #202123;
+    border: 2px solid #363A42;
+    font-size: .75em;
+    line-height: 14px;
+    color: white;
+    font-family: Roberto;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+::placeholder {
+    color: white;
+    font-family: Roberto, FontAwesome;
+    font-weight: 700;
+    opacity: 1;
+    padding-left: 10px;
+  }

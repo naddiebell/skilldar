@@ -7,7 +7,7 @@ function NavBar() {
        
         <ul className="navBar">
             <li>
-                <a href="#" className="skilldarLogo"></a>
+                <div className="skilldarLogo"><img src="https://res.cloudinary.com/savely/image/upload/v1613575311/extra/Screenshot_2021-02-17_at_16.21.45_rf7dlf.png" alt="Skilldar"/></div>
             </li>
         </ul>
       

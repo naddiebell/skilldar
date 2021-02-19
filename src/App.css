@@ -1,0 +1,11 @@
+.searchBar {
+    z-index: 5;
+    margin: -20px;
+    width: 20rem;
+    background: black;
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+}

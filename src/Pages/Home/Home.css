@@ -1,25 +1,28 @@
-.header {
-    min-width: 100%;
-    height: 30vh;
-    background-image: url("https://res.cloudinary.com/savely/image/upload/v1613401190/cinema/oxygen-nature-header_qwzmxf.webp");
+.numberOfProjectsDiv {
+    height: 3.5rem;
+    width: 100%;
+    background: #26262E;
+    border-bottom: 3px solid rgb(141, 141, 142, 0.35);
+    /*  opacity: 0.35; for line */
+}
+
+.homeBackground {
+    background: #26262E;
+    padding: 1.5rem;
+}
+
+.projectCardDiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    overflow: hidden;
 }
 
-.headerTitle {
-    font-size: 40px;
-    line-height: 50px;
-    font-family: 'Source Sans Pro', sans-serif;
+.jobCount {
+    font-family: Roberto;
+    font-size: 12px;
     font-weight: 700;
-
+    color: #B0B3B5;
+    padding-top: 2%;
 }
-
-.headerSubtitle {
-    font-size: 24px;
-    line-height: 30px;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
