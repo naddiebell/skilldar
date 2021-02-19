@@ -6,6 +6,7 @@ import './App.css';
 import NavBar from "./Components/NavBar/NavBar"
 import Home from "./Pages/Home/Home"
 import SearchBar from "./Components/SearchBar/SearchBar"
+import Header from "./Components/Header/Header"
 
 function App() {
   const [data, setData] = useState();
@@ -23,23 +24,13 @@ function App() {
     fetchData()
   }, [])
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     // You can await here
-  //     const response = await MyAPI.getData(someId);
-  //     // ...
-  //   }
-  //   fetchData();
-  // }, [someId]); // Or [] if effect doesn't need props or state
-
-
-
   return (
     <>
       <NavBar />
+      <Header />
       <AppContext.Provider value={{ state, dispatch }}>
-        <Home projectData={data} />
         <SearchBar />
+        <Home projectData={data} />        
       </AppContext.Provider>
     </>
   );
