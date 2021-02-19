@@ -6,7 +6,8 @@ import './App.css';
 import NavBar from "./Components/NavBar/NavBar"
 import Home from "./Pages/Home/Home"
 import SearchBar from "./Components/SearchBar/SearchBar"
-import Header from "./Components/Header/Header"
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer"
 
 function App() {
   const [data, setData] = useState();
@@ -34,6 +35,7 @@ function App() {
           <Home projectData={data} />
         </div>
       </AppContext.Provider>
+      <Footer />
       
     </>
   );

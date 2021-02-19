@@ -1,5 +1,5 @@
 .card {
-    width: 425px;
+    width: 32%;
     height: 226px;
     background: #363a42;
     border-radius: 6px;
@@ -10,6 +10,7 @@
     justify-content: space-around;
     font-size: 16px;
     margin-bottom: 1.5rem;
+    margin-right: 1.1rem;
 }
 
 .businessInfo {
@@ -102,3 +103,17 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+      width: 90%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .projectDescriptionDiv {
+        margin-bottom: 8px;
+    }
+    .projectDescriptionText {
+        font-size: 18px;
+    }
+  }

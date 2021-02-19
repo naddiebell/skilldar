@@ -1,18 +1,15 @@
 import React, { useState, useContext } from 'react';
 import AppContext from "../../store/context";
 import "./SearchBar.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function SearchBar() {
     const { dispatch } = useContext(AppContext);
     const [searchTerm, setSearchTerm] = useState("");
     
     const handleKeyDown = (search) => {
-        if ( searchTerm === "") {
+        if ( searchTerm === undefined) {
             return
         } else {
-            console.log(search, "search")
             dispatch({ type: "setSearchTerm", data: search })
         }
     }

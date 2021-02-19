@@ -6,7 +6,6 @@ import ProjectCard from "../../Components/ProjectCard/ProjectCard"
 function Home(props) {
     const { state } = useContext(AppContext);
     const { projectData } = props
-    console.log("state from home", state.project.search_term)
 
     const { search_term } = state.project;
 
@@ -23,7 +22,6 @@ function Home(props) {
         })
         return card
     }
-
 
    
     const filteredProjects = (array, searchTerm) => {
@@ -45,16 +43,11 @@ function Home(props) {
             if (business.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
             }
-            console.log("filteredProjectsArr", filteredProjectsArr)
              return filteredProjectsArr
         })
-         console.log("filteredProjectsArr2222", filteredProjectsArr)
+    
         return filteredProjectsArr
     }
-
-    console.log("aaaaa", filteredProjects(projectData, search_term))
-   // console.log("search term", search_term)
-
 
     const displayNumberOfProjects = (arr) => {
         if (arr === undefined) {
@@ -77,6 +70,8 @@ function Home(props) {
             return true
         }
     }
+
+    console.log("searchterm", search_term)
 
     return (
         <>
