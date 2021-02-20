@@ -21,7 +21,10 @@ export default function SearchBar() {
           type="text"
           placeholder="&#xF002; Search creative projects"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            setSearchTerm(e.target.value)
+            dispatch({ type: "setSearchTerm", data: e.target.value })
+            }}
           onKeyDown={(event) =>
             event.key === "Enter" && handleKeyDown(searchTerm)
           }

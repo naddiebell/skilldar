@@ -33,6 +33,7 @@ function Home(props) {
             let tag1 = aProject.tag1.toLowerCase()
             let tag2 = aProject.tag2.toLowerCase()
             let business = aProject.business_name.toLowerCase()
+            let description = aProject.project_description.toLowerCase()
             let searchTerm = search_term.toLowerCase();
             if (tag1.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
@@ -41,6 +42,9 @@ function Home(props) {
                 filteredProjectsArr.push(aProject);
             }
             if (business.includes(searchTerm)) {
+                filteredProjectsArr.push(aProject);
+            } 
+            if (description.includes(searchTerm)) {
                 filteredProjectsArr.push(aProject);
             }
              return filteredProjectsArr
