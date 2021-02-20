@@ -10,11 +10,11 @@ export default function Footer() {
             <ul>
                 <div className="flexDiv">
                     <div className="leftFooterDiv">
-                        <li>Terms and Privacy</li>
-                        <li>Contact</li>
+                        <li>Terms & Privacy</li>
+                        <li id="contact">Contact</li>
                     </div>
                     <div className="rightFooterDiv">
-                        <li>2020 | SkillDar | All Rights Reserved</li>
+                        <li className="copyrightText"> © 2020 | SkillDar | All Rights Reserved</li>
                         <li><FontAwesomeIcon icon={faInstagram} /></li>
                         <li><FontAwesomeIcon icon={faTwitterSquare} /></li>
                     </div>

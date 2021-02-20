@@ -9,13 +9,13 @@
 .homeBackground {
     background: #26262E;
     padding: 1.5rem;
+    /* min-height: 25rem; */
 }
 
 .projectCardDiv {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    
     padding-top: 1.5rem;
     overflow: hidden;
 }

@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const result = await axios(
-        'https://my.api.mockaroo.com/skilldar.json?key=ead60b70',
+       'https://my.api.mockaroo.com/skilldar.json?key=ead60b70',
       );
 
       setData(result.data);

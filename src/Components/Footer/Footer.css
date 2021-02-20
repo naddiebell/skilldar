@@ -3,12 +3,8 @@
     font-family: Roboto;
     color: #8D8D8E;
     width: 100%;
-    height: 60px;
-    /* background: #26262E; */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background: red;
+    height: 50px;
+    background: #26262E;
 }
 
 ul {
@@ -17,6 +13,11 @@ ul {
 
 .leftFooterDiv {
     display: flex;
+    height: 100%;
+    font-size: 17px;
+    line-height: 20px;
+    align-content: center;
+    margin-left: 5px;
 }
 
 .rightFooterDiv {
@@ -26,5 +27,37 @@ ul {
 .flexDiv {
     display: flex;
     justify-content: space-between;
-
+    padding-top: 8%;
+    margin-right: 5px;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
 }
+
+li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.copyrightText {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#contact {
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .leftFooterDiv {
+      font-size: 12px;
+    }
+    .copyrightText {
+        font-size: 10px;
+    }
+    #contact{
+        margin-left: 10px;
+    }
+    .flexDiv{
+        padding-left: 0;
+    }
+  }
